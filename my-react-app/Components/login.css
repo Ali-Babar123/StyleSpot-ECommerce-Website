@@ -1,0 +1,219 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f0f0f0e0; 
+    padding: 20px;
+}
+
+.container-login {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-logup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-in,
+.log-up {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.log-in .title,
+.log-up h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-container {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.social:hover {
+    background-color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.log-in input,
+.log-up input {
+    width: 180%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Updated styles for increased width in signup section */
+.log-up input,
+.log-up button.logup-button {
+    width: calc(100% + 40px); /* Increased width by 40px */
+    max-width: calc(100% + 40px); /* Set a max-width to ensure it fits the container */
+}
+
+.login-button,
+.logup-button {
+    padding: 12px 20px;
+    background-color: #ec510f;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    width: 180%;
+    max-width: 200px;
+}
+
+.logup-button {
+    background-color: #f02857;
+    border: 1px solid #fff;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+.login-button:hover {
+    background-color: #e5531a;
+}
+
+.logup-button:hover {
+    background-color: #da1a47;
+}
+
+.log-up {
+    background: linear-gradient(90deg, #f02857, #f02857);
+    color: #fff;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container-login {
+        flex-direction: row;
+    }
+
+    .login-logup {
+        flex-direction: row;
+    }
+
+    .log-in,
+    .log-up {
+        width: 50%;
+        padding: 50px;
+    }
+
+    .log-in .title,
+    .log-up h1 {
+        font-size: 36px;
+    }
+
+    .login-button,
+    .logup-button {
+        width: 55%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-login {
+        width: 90%;
+        height: auto;
+    }
+
+    .log-in .title,
+    .log-up h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-login {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .log-in,
+    .log-up {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .log-in .title,
+    .log-up h1 {
+        font-size: 28px;
+    }
+
+    .login-button,
+    .logup-button {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .social {
+        font-size: 16px;
+    }
+
+    .log-in input,
+    .log-up input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 468px) {
+    .log-in .title,
+    .log-up h1 {
+        font-size: 24px;
+    }
+
+    .login-button,
+    .logup-button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .social {
+        font-size: 14px;
+    }
+}

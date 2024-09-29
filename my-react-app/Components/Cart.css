@@ -1,0 +1,122 @@
+.cart-container {
+    position: relative; /* Make the parent container relative */
+    margin-left: 25px;
+}
+
+.price-detail-fixed {
+    position: absolute; /* Absolute positioning within the parent */
+    bottom: 0; /* Distance from the bottom */
+    right: -300px; /* Distance from the right */
+    z-index: 10; /* Ensures it is above other elements */
+    width: 400px; /* Width can be adjusted as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    padding: 1rem; /* Padding for spacing */
+    border: 1px solid #ccc; /* Border for better separation */
+    border-radius: 1px; /* Rounded corners */
+}
+.cartview{
+    color: black;
+    font-family: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.checkout {
+    background: rgba(5, 10, 50, 1);
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.checkout:hover {
+    background-color: black;
+}
+
+@media (max-width: 1280px) {
+    .price-detail-fixed {
+        position: relative; /* Change to relative positioning on smaller screens */
+        bottom: auto; /* Reset bottom spacing */
+        right: auto; /* Reset right spacing */
+        width: 100%; /* Full width on medium screens */
+        margin-top: 20px; /* Add some space above */
+        box-shadow: none; /* Optional: remove shadow for smaller screens */
+        padding: 1rem; /* Maintain padding */
+    }
+}
+/* Existing styles remain unchanged */
+
+/* Media query for screens less than 768px */
+@media (max-width: 768px) {
+    .price-detail-fixed {
+        position: relative; /* Change to relative positioning on smaller screens */
+        bottom: auto; /* Reset bottom spacing */
+        right: auto; /* Reset right spacing */
+        width: 100%; /* Full width on small screens */
+        margin-top: 20px; /* Add some space above */
+        box-shadow: none; /* Optional: remove shadow for smaller screens */
+        padding: 1rem; /* Maintain padding */
+    }
+
+    .quantity {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+
+    .quantity .text-4xl{
+        font-size: 2.5rem; 
+    }
+    .quantity .text-3xl {
+        font-size: 2rem; /* Adjust icon size for small screens if needed */
+    }
+}
+
+/* Existing styles remain unchanged */
+
+/* Media query for screens less than 480px */
+@media (max-width: 480px) {
+    .price-detail-fixed {
+        position: relative; /* Change to relative positioning on very small screens */
+        bottom: auto; /* Reset bottom spacing */
+        right: auto; /* Reset right spacing */
+        width: 100%; /* Full width on very small screens */
+        margin-top: 10px; /* Slightly less space above */
+        padding: 0.5rem; /* Slightly less padding */
+        font-size: 0.875rem; /* Adjust font size for better fit */
+    }
+
+    .price-detail-fixed h3 {
+        font-size: 1.25rem; /* Smaller font size for the heading */
+    }
+
+    .price-detail-fixed .flex {
+        flex-direction: column; /* Stack the price details vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .price-detail-fixed .flex > span {
+        display: block; /* Ensure each span takes a new line */
+        width: 100%; /* Full width for better readability */
+    }
+
+    .checkout {
+        width: 100%; /* Full width for the checkout button */
+        height: 36px; /* Adjust height for smaller screens */
+    }
+
+    .quantity .text-4xl {
+        font-size: 2rem; /* Adjust icon size for very small screens */
+    }
+
+    .quantity .text-3xl {
+        font-size: 1.5rem; /* Adjust icon size for very small screens */
+    }
+}
